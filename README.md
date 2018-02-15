@@ -1,11 +1,12 @@
-# optimize-flu-surveillance
+# Mapping and modeling drivers of influenza disease burden using hierarchical models
+## Approximate Bayesian inference performed in R-INLA
 
 This repository provides the source code and model outputs for a spatial Bayesian hierarchical model that maps county-level disease burden for influenza-like illness in the United States.
 
 The model and mapping outputs are described in the following paper:
 Lee, Elizabeth C., Ali Arab, Sandra M. Goldlust, C&eacute;cile Viboud, Bryan T. Grenfell, and Shweta Bansal. (2018). "Deploying digital health data to optimize influenza surveillance at national and local scales." PLOS Computational Biology. doi:10.1371/journal.pcbi.1006020.
 
-## model codes and inputs
+### model codes and inputs
 The source code for the primary models presented in the manuscript may be found in `model_codes/`. The codes here demonstrate the specific settings and parameters in our INLA models and provide additional examples for how to utilize the [R-INLA software](http://www.r-inla.org/). Please note that the input data to run the source code are not posted in this repository. 
 
 Descriptions of the files are as follows:
@@ -16,7 +17,7 @@ Descriptions of the files are as follows:
   * `custom_functions.R`: functions to prepare covariate data for INLA
   * `US_county_adjacency.graph`: county neighborhood structure, an input file for the county-level multi-season models
 
-## model outputs
+### model outputs
 Summary statistics for estimated model parameters and fitted model values are provided as follows:
   * `summaryStats_epidemicDuration.csv`
   * `summaryStatsFitted_epidemicDuration.csv`
