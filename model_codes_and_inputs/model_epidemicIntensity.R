@@ -30,7 +30,7 @@ formula <- Y ~ -1 +
 
 
 #### run models for all seasons ################################
-modData_hurdle <- prepare_data_for_inla(modData_full)
+modData_hurdle <- prepare_inla_data(modData_full)
 
 mod <- inla(formula,
             family = "gaussian",
