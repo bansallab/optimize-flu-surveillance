@@ -24,7 +24,7 @@ formula <- Y ~ -1 +
   X_humidity_nonzero + X_pollution_nonzero + X_singlePersonHH_nonzero + offset(logE_nonzero)
 
 #### run models by season ################################
-modData_hurdle <- prepare_data_for_inla(modData_full)
+modData_hurdle <- prepare_inla_data(modData_full)
 
 mod <- inla(formula,
             family = "gaussian",
