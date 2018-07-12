@@ -27,7 +27,7 @@ formula <- Y ~ -1 +
   intercept_nonzero + O_imscoverage_nonzero + O_careseek_nonzero + O_insured_nonzero + X_poverty_nonzero + X_child_nonzero + X_adult_nonzero + X_hospaccess_nonzero + X_popdensity_nonzero + X_housdensity_nonzero + X_vaxcovI_nonzero + X_vaxcovE_nonzero + X_H3A_nonzero + X_B_nonzero + X_priorImmunity_nonzero + X_humidity_nonzero + X_pollution_nonzero + X_singlePersonHH_nonzero + X_H3A_nonzero*X_adult_nonzero + X_B_nonzero*X_child_nonzero
 
 #### run models for all seasons ################################
-modData_hurdle <- prepare_data_for_inla(modData_full)
+modData_hurdle <- prepare_inla_data(modData_full)
 
 mod <- inla(formula,
             family = "poisson",
